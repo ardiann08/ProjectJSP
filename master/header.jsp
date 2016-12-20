@@ -34,7 +34,7 @@
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
-                <li class="dropdown">
+                <li class="dropdown">                   
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 
                         <%= session.getAttribute("fullname") != null ? session.getAttribute("fullname")  : "Guest" %>
                     <b class="caret"></b></a>
@@ -85,7 +85,7 @@
                             <a href="login.jsp"><i class="glyphicon glyphicon-log-in"></i> Login</a>
                         </li>                        
                     </ul>
-                <%}%>
+                <%}%>                
             </div>
         </nav>
 
