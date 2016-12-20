@@ -33,12 +33,7 @@
 	        			%>
 	        				<label><%= count++%>.  <%= rs2.getString("name")%> - Rp. <%= rs2.getString("subtotalprice")%>,- (Rp. <%= rs2.getString("price")%> x <%= rs2.getString("qty")%> Pcs)  </label><br/>
 	        			<%}%>
-	        		</div>
-	        		<div class="col-md-offset-10">
-	        			<a href="controller/doApprove.jsp?tid=<%= rs.getString("tid") %>">
-	        				<button class="btn btn-primary">Approve</button>
-	        			</a>
-	        		</div>		        		
+	        		</div>	        			        		
         		</div>
         	</div>        	
         <%}%>

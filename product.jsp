@@ -1,20 +1,11 @@
 <%@include file="master/header.jsp"%>
 <%@include file="../helper/connect.jsp"%>
 
-<<<<<<< HEAD
+
 <%
 	String query = "select * from productstable a join userstable b on a.uid = b.uid";
 	ResultSet rs = st.executeQuery(query);
 %>
-=======
-<style type="text/css">
-	.panel-body img, .description{
-		float: left;
-	}
-</style>
-
-
->>>>>>> origin/master
 
 
 <div class="container-fluid">
@@ -45,11 +36,11 @@
         <div class="panel-group">
 
         <%
-        	String query = "select * from productstable a join userstable b on a.uid = b.uid";
+        	query = "select * from productstable a join userstable b on a.uid = b.uid";
         	if(request.getParameter("find")!=null){
 				query+=" where name like '%"+request.getParameter("find")+"%'";
     		}
-			ResultSet rs = st.executeQuery(query);
+			rs = st.executeQuery(query);
         	while(rs.next()){
         %>
         <div class="col-md-12">
