@@ -10,6 +10,7 @@
 	String gender = request.getParameter("rbGender");
 	String dob = request.getParameter("dob");
 	String address = request.getParameter("txtAddress");
+	String photo = request.getParameter("fPhoto");
 
 	String message = "";
 
@@ -26,13 +27,18 @@
 	if(password.equals("") || cpassword.equals("")){
 		message += "please fill password and confirm password<br/>";
 	}
-
+	if(email.equals("")){
+		message += "please fill email address<br/>";
+	}
 	if(address.equals("")){
 		message += "please fill address<br/>";
 	}
 
 	if(dob.equals("")){
 		message += "please select date of birth <br/>";
+	}
+	if(!photo.endsWith(".jpg")&&!photo.endsWith(".png")){
+		message +="please insert photo with extension .jpg or .png";
 	}
 
 	if(message.equals("")){
