@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 20, 2016 at 05:47 PM
+-- Generation Time: Dec 20, 2016 at 06:19 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -19,6 +19,34 @@ SET time_zone = "+00:00";
 --
 -- Database: `projectjsp`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `productstable`
+--
+
+CREATE TABLE IF NOT EXISTS `productstable` (
+  `pid` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `price` int(11) NOT NULL,
+  `weight` int(11) NOT NULL,
+  `stock` int(11) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `uid` int(11) NOT NULL,
+  PRIMARY KEY (`pid`),
+  UNIQUE KEY `pid` (`pid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `productstable`
+--
+
+INSERT INTO `productstable` (`pid`, `name`, `price`, `weight`, `stock`, `image`, `uid`) VALUES
+(1, 'Mouse', 350000, 50, 80, 'mouse.png', 1),
+(2, 'Keyboard', 350000, 50, 80, 'keyboard.jpg', 1),
+(3, 'Baju', 200000, 50, 80, 'baju.jpg', 1),
+(4, 'TV', 2500000, 50, 80, 'tv.jpg', 1);
 
 -- --------------------------------------------------------
 
