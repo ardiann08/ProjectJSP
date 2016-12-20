@@ -8,6 +8,10 @@
 
 	String query = "insert into cartstable values(null, "+ session.getAttribute("uid") +", "+ pid +", "+ qty +", "+ subtotal +")";
 	st.executeUpdate(query);
+
+	query = "update productstable set stock = stock - " + qty;
+	st.executeUpdate(query);
+
 	response.sendRedirect("../product.jsp?message=Success to add cart");
 
 %>

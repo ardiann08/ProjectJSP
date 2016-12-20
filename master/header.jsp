@@ -65,9 +65,15 @@
                         <li>
                             <a href="member.jsp"><i class="glyphicon glyphicon-leaf"></i> Member</a>
                         </li>
+                        <%if(session.getAttribute("role").equals("member")){%>
+                            <li>
+                                 <a href="transaction.jsp"><i class="glyphicon glyphicon-modal-window"></i> Transaction</a>
+                            </li>     
+                        <%}else{%>
                         <li>
-                            <a href="transaction.jsp"><i class="glyphicon glyphicon-modal-window"></i> Transaction</a>
+                            <a href="transactionadmin.jsp"><i class="glyphicon glyphicon-modal-window"></i> Transaction</a>
                         </li>
+                        <%}%>
                         <%if(session.getAttribute("role").equals("member")){%>
                             <li>
                                 <a href="cart.jsp"><i class="glyphicon glyphicon-shopping-cart"></i> Cart</a>

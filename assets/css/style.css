@@ -9,3 +9,7 @@
 	border-color: black;
 	width: 100%;
 }
+
+.panel-body img, .description{
+	float: left;
+}

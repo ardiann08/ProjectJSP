@@ -1,18 +1,10 @@
 <%@include file="master/header.jsp"%>
 <%@include file="../helper/connect.jsp"%>
 
-<style type="text/css">
-	.panel-body img, .description{
-		float: left;
-	}
-</style>
-
-
 <%
 	String query = "select * from productstable a join userstable b on a.uid = b.uid";
 	ResultSet rs = st.executeQuery(query);
 %>
-
 
 
 <div class="container-fluid">
