@@ -66,7 +66,7 @@
 			<div class="form-group">
 				<label class="control-label col-sm-2"></label>
 				<div class="col-sm-5">
-					<input type="submit" value="Register" class="btn btn-primary form-control" />
+					<input type="submit" value="Update" class="btn btn-primary form-control" />
 				</div>
 			</div>
         </form>

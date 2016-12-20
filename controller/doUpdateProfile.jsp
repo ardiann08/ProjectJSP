@@ -32,7 +32,7 @@
 		message += "Please Insert Address<br/>";
 	}
 	if(!photo.endsWith(".jpg")&&!photo.endsWith(".png")){
-		message +="Please Insert Photo with extension .jpg or .png";
+		message +="Please Insert Photo with extension .jpg or .png<br/>";
 	}
 	if(message.equals("")){
 		stmt.executeUpdate("update userstable set password ='"+newpassword+"' , phone = '"+phonenumber+"' , email = '"+email+"' , address = '"+address+"' , photo = '"+photo+"' where uid = "+session.getAttribute("uid"));
