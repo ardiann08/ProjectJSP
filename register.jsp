@@ -6,7 +6,7 @@
     <div class="row">
         <h3>Register</h3>
 
-        <form action="doRegister.jsp" method="POST" class="form-horizontal">
+        <form action="controller/doRegister.jsp" method="POST" class="form-horizontal">
 			<div class="form-group">
 				<label class="control-label col-sm-2">Fullname</label>
 				<div class="col-sm-5">
@@ -29,6 +29,12 @@
 				<label class="control-label col-sm-2">Confirm Password</label>
 				<div class="col-sm-5">
 					<input type="password" class="form-control" name="txtCPassword" placeholder="Enter Confirm Password">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2">Phone</label>
+				<div class="col-sm-5">
+					<input type="number" class="form-control" min="0" max="99999999999" name="txtPhonenumber" placeholder="Enter phone number">
 				</div>
 			</div>
 			<div class="form-group">

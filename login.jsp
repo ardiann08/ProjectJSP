@@ -6,7 +6,7 @@
     <div class="row">
         <h3>Login</h3>
 
-        <form action="doLogin.jsp" method="POST" class="form-horizontal">
+        <form action="controller/doLogin.jsp" method="POST" class="form-horizontal">
 			<div class="form-group">
 				<label class="control-label col-sm-2">Username</label>
 				<div class="col-sm-5">
