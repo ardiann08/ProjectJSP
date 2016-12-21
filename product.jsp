@@ -71,7 +71,10 @@
 		        				<input type="number" min="1" value="1" max="<%= rs.getString("stock")%>" name="txtQty"/><br/><br/>
 		        				<button type="submit" class="btn btn-primary">
 		        					<i class="glyphicon glyphicon-shopping-cart"></i> Add to Cart
-		        				</button>		        				
+		        				</button>
+		        				<a href="comment.jsp?pid=<%=rs.getString("pid")%>" class="btn btn-default" style="margin-top: 10px;">
+		        					<i class="glyphicon glyphicon-comment"></i> Comment
+		        				</a>		        				
 		        			</div>		 
 		        		<%}else{%>
 		        			<div class="col-md-offset-10">		        				
@@ -80,6 +83,9 @@
 		        				</a>
 		        				<a href="controller/doDeleteProduct.jsp?pid=<%= rs.getString("pid")%>" class="btn btn-danger" onclick="return confirm('Are you sure ?')">
 		        					Delete
+		        				</a>
+		        				<a href="" class="btn btn-default" style="margin-top: 10px;">
+		        					<i class="glyphicon glyphicon-comment"></i> Comment
 		        				</a>
 		        			</div>
 		        		<%}%>      		

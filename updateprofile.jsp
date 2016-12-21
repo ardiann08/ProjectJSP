@@ -2,7 +2,7 @@
 <%@include file="master/header.jsp"%>
 
 <%
-	ResultSet  rs =st.executeQuery("select * from userstable");
+	ResultSet  rs =st.executeQuery("select * from userstable where uid = "+session.getAttribute("uid"));
 	if(rs.next()){
 %>
 

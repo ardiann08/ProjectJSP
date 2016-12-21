@@ -9,7 +9,12 @@
 	border-color: black;
 	width: 100%;
 }
-
+.gold{
+	color: gold;
+}
 .panel-body img, .description{
 	float: left;
+}
+textarea{
+	resize: none;
 }
