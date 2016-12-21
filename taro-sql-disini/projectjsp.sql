@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 21, 2016 at 12:12 PM
+-- Generation Time: Dec 21, 2016 at 03:53 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -85,7 +85,11 @@ CREATE TABLE `productstable` (
 INSERT INTO `productstable` (`pid`, `name`, `price`, `weight`, `stock`, `image`, `uid`) VALUES
 (1, 'Mouse', 350000, 50, 72, 'mouse.png', 1),
 (2, 'Keyboard', 350000, 50, 96, 'keyboard.jpg', 1),
-(3, 'Baju', 200000, 50, 72, 'baju.jpg', 1);
+(3, 'Baju', 200000, 50, 72, 'baju.jpg', 1),
+(4, 'TV', 3000000, 5, 53, 'tv.jpg', 1),
+(5, 'Ikat Pinggang', 50000, 77, 31, 'ikatpinggang.jpg', 1),
+(6, 'Headset', 1000000, 100, 21, 'headset.jpg', 1),
+(7, 'Tas', 150000, 100, 66, 'tas.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -226,7 +230,7 @@ ALTER TABLE `commentstable`
 -- AUTO_INCREMENT for table `productstable`
 --
 ALTER TABLE `productstable`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `transactiondetailstable`
 --
