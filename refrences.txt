@@ -1,0 +1,8 @@
+baju : http://site.topdogshirts.com/images/blank/t200whiteroyal.jpg
+headset : http://www.144hzmonitors.com/wp-content/uploads/2015/11/Sentey-GS-4730-814x1024.jpg?d2b74a
+ikatpinggang : http://ganlob.com/wp-content/uploads/2013/06/burberry-630x350.jpg
+keyboard : http://assets.razerzone.com/eeimages/products/22563/rzr_deathstalker_chroma_03.png
+mouse : http://assets.razerzone.com/eeimages/products/293/razer-taipan-gallery-5-black.png
+profilepic : https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg
+tas : http://3.bp.blogspot.com/-R84sf6RyPGc/Uv9Ia4FKo3I/AAAAAAAAA6Q/uiCacdHvc64/s1600/Tas+eiger+2154.jpg
+tv : http://im.rediff.com/gadget/2015/feb/Weston.jpg
