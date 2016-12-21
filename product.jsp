@@ -30,9 +30,12 @@
 	    	<a href="addproduct.jsp" class="btn btn-default" style="width: 100%;">Add Product</a>
 	    </div>
 		<%}%>
-    	<span style="color: red">
-    		<%= request.getParameter("message") != null ? request.getParameter("message") : ""  %>
-    	</span>
+		<div class="col-md-4 col-md-offset-4" style="text-align: center;">
+			<span style="color: red">
+    			<%= request.getParameter("message") != null ? request.getParameter("message") : ""  %>
+    		</span>
+		</div>	
+    	
         <div class="panel-group">
 
         <%

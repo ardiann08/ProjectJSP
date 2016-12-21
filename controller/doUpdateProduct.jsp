@@ -23,12 +23,12 @@
 		message += "please fill product stock <br/>";
 	}
 	if(!image.endsWith(".jpg") && !image.endsWith(".png")){
-		message += "please fill product name <br/>";
+		message +="Please Insert Image with extension .jpg or .png<br/>";
 	}
 	if(!message.equals("")){
-		response.sendRedirect("../updateproduct.jsp?message="+message);
+		response.sendRedirect("../updateproduct.jsp?pid="+pid+"&message="+message);
 	}else{
-		String query = "update productstable set name='"+ name +"', price="+ price +", weight="+ weight +", stock="+ stock +", image='mouse.png' where pid=" + pid;
+		String query = "update productstable set name='"+ name +"', price="+ price +", weight="+ weight +", stock="+ stock +", image='"+image+"' where pid=" + pid;
 		st.executeUpdate(query);
 		response.sendRedirect("../product.jsp?message=Success to update product");
 	}
