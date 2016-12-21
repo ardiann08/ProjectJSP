@@ -121,7 +121,6 @@
 					if(counter%limit!=0){
 						lastpage++;
 					}
-					System.out.println(lastpage);	
         		}
         	%>
         	<%

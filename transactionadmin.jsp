@@ -18,7 +18,16 @@
     	</span>
         <div class="panel-group">
         <%
-        	String query = "select * from transactionstable";
+        	String query = "select * from transactionstable";      
+            int limit=5;
+            int currentpage=1;
+            int offset=0;
+            int lastpage=0;
+            if(request.getParameter("page")!=null){
+                currentpage=Integer.parseInt(request.getParameter("page"));
+                offset=(limit*(currentpage-1));
+            }
+            query+=" limit "+limit+" offset "+offset;
         	ResultSet rs = st.executeQuery(query);
         	while(rs.next()){
         %>
@@ -62,6 +71,44 @@
 	        </div>
         <%}%>
 
+        </div>
+        <div class="col-md-12" style="text-align: center;">
+            <%  
+                ResultSet rs3 = st.executeQuery("select count(*) as counter from transactionstable");
+                int counter=0;
+                if(rs3.next()){
+                    counter=Integer.parseInt(rs3.getString("counter"));
+                    lastpage=counter/limit;
+                    if(counter%limit!=0){
+                        lastpage++;
+                    }   
+                }
+            %>
+            <%
+                if(currentpage!=1){
+            %>
+            <div class="btn-group">
+                <a href="transactionadmin.jsp?page=<%=currentpage-1%>"  class="btn btn-default"><</a>
+            </div>
+            <%}%>
+            
+            <div class="btn-group">
+                <%
+                    for(int i=1;i<lastpage+1;i++){
+                %>
+                <a href="transactionadmin.jsp?page=<%=i%>"  class="btn btn-default"><%=i%></a>
+                <%}%>
+            </div>
+            
+
+            <%
+                if(currentpage!=lastpage){
+            %>
+            <div class="btn-group">
+                <a href="transactionadmin.jsp?page=<%=currentpage+1%>"  class="btn btn-default">></a>
+            </div>
+            <%}%>
+        
         </div>
     </div>
 </div>
