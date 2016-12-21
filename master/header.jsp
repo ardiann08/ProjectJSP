@@ -60,7 +60,7 @@
                             <a href="index.jsp"><i class="glyphicon glyphicon-home"></i> Home</a>
                         </li>
                         <li>
-                            <a href="product.jsp"><i class="glyphicon glyphicon-list-alt"></i> product</a>
+                            <a href="product.jsp"><i class="glyphicon glyphicon-list-alt"></i> Product</a>
                         </li>
                         <li>
                             <a href="member.jsp"><i class="glyphicon glyphicon-leaf"></i> Member</a>

@@ -11,6 +11,7 @@
 %>
 <div class="container-fluid">
     <div class="row">
+    	<h3 style="text-align: center;">Profile</h3>
     	<div class="col-md-2">
 	    	<img src="assets/images/<%=rs.getString("photo")%>" alt="" class="img-circle">
 	    </div>

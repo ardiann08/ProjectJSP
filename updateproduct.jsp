@@ -4,7 +4,7 @@
 	if(session.getAttribute("role")==null){
         response.sendRedirect("error.jsp");
     }else{
-        if(session.getAttribute("role").equals("member")==false){
+        if(session.getAttribute("role").equals("admin")==false){
             response.sendRedirect("error.jsp");
         }
     }
