@@ -1,6 +1,11 @@
 <%@include file="helper/connect.jsp"%>
 <%@include file="master/header.jsp"%>
 <%
+    if(session.getAttribute("role")==null){
+        response.sendRedirect("error.jsp");
+    }
+%>
+<%
 	ResultSet rs =st.executeQuery("select * from productstable where pid = "+request.getParameter("pid"));
 	if(rs.next()){
 %>
@@ -153,6 +158,9 @@
     		</div>    		
     	</div>
     	<%}%>
+    	<%
+    		if(session.getAttribute("role").equals("member")){
+    	%>
     	<div class="col-md-12">
     		<form action="controller/doAddComment.jsp" method="post">
     			<input type="hidden" name="txtpid" value="<%=request.getParameter("pid")%>">
@@ -174,7 +182,8 @@
     				<button class="btn btn-default" type="submit">Add Comment</button>
     			</div>
     		</form>
-    	</div>	        	
+    	</div>
+    	<%}%>	        	
     </div>
 </div>
 <%}%>

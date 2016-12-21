@@ -1,6 +1,14 @@
 <%@include file="helper/connect.jsp"%>
 <%@include file="master/header.jsp"%>
-
+<%
+	if(session.getAttribute("role")==null){
+        response.sendRedirect("error.jsp");
+    }else{
+        if(session.getAttribute("role").equals("member")==false){
+            response.sendRedirect("error.jsp");
+        }
+    }
+%>
 <%
 	ResultSet  rs =st.executeQuery("select * from commentstable where cid = "+request.getParameter("cid")+" and uid = "+session.getAttribute("uid"));
 	if(rs.next()){

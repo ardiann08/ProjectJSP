@@ -1,5 +1,9 @@
 <%@include file="master/header.jsp"%>
-
+<%
+	if(session.getAttribute("role")!=null){
+		response.sendRedirect("error.jsp");
+	}
+%>
 
 
 <div class="container-fluid">

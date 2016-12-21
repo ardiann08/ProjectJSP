@@ -1,5 +1,14 @@
 <%@include file="master/header.jsp"%>
 <%@include file="../helper/connect.jsp"%>
+<%
+	if(session.getAttribute("role")==null){
+        response.sendRedirect("error.jsp");
+    }else{
+        if(session.getAttribute("role").equals("member")==false){
+            response.sendRedirect("error.jsp");
+        }
+    }
+%>
 
 
 <%

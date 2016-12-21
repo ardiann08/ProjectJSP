@@ -1,6 +1,11 @@
 <%@include file="helper/connect.jsp"%>
 <%@include file="master/header.jsp"%>
 <%
+	if(session.getAttribute("role")==null){
+		response.sendRedirect("error.jsp");
+	}
+%>
+<%
 	ResultSet rs =st.executeQuery("select * from userstable where uid = "+session.getAttribute("uid"));
 	if(rs.next()){
 %>

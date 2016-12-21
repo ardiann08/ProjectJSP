@@ -1,6 +1,14 @@
 <%@include file="helper/connect.jsp"%>
 <%@include file="master/header.jsp"%>
-
+<%
+	if(session.getAttribute("role")==null){
+        response.sendRedirect("error.jsp");
+    }else{
+        if(session.getAttribute("role").equals("admin")==false){
+            response.sendRedirect("error.jsp");
+        }
+    }
+%>
 
 <div class="container-fluid">
     <div class="row">

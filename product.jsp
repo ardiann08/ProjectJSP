@@ -1,6 +1,10 @@
 <%@include file="master/header.jsp"%>
 <%@include file="../helper/connect.jsp"%>
-
+<%
+	if(session.getAttribute("role")==null){
+		response.sendRedirect("error.jsp");
+	}
+%>
 
 <%
 	String query = "select * from productstable a join userstable b on a.uid = b.uid";
@@ -84,7 +88,7 @@
 		        				<a href="controller/doDeleteProduct.jsp?pid=<%= rs.getString("pid")%>" class="btn btn-danger" onclick="return confirm('Are you sure ?')">
 		        					Delete
 		        				</a>
-		        				<a href="" class="btn btn-default" style="margin-top: 10px;">
+		        				<a href="comment.jsp?pid=<%=rs.getString("pid")%>" class="btn btn-default" style="margin-top: 10px;">
 		        					<i class="glyphicon glyphicon-comment"></i> Comment
 		        				</a>
 		        			</div>

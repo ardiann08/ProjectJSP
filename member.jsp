@@ -1,6 +1,10 @@
 <%@include file="master/header.jsp"%>
 <%@include file="helper/connect.jsp"%>
-
+<%
+	if(session.getAttribute("role")==null){
+		response.sendRedirect("error.jsp");
+	}
+%>
 	<div class="container-fluid">
     <div class="row">
     	<h3 style="text-align: center;">All Active Member</h3>
