@@ -44,7 +44,7 @@
 			<div class="form-group">
 				<label class="control-label col-sm-2">Email</label>
 				<div class="col-sm-5">
-					<input type="text" class="form-control" name="txtEmail" placeholder="Enter phone number">
+					<input type="text" class="form-control" name="txtEmail" placeholder="Enter Email">
 				</div>
 			</div>
 			<div class="form-group">
@@ -63,7 +63,7 @@
 			<div class="form-group">
 				<label class="control-label col-sm-2">Address</label>
 				<div class="col-sm-5">
-					<textarea class="form-control" cols="5" name="txtAddress" placeholder="Insert Address"></textarea>
+					<textarea class="form-control" cols="5" name="txtAddress" placeholder="Your Address"></textarea>
 				</div>
 			</div>
 			<div class="form-group">

@@ -1,5 +1,6 @@
 <%@include file="/helper/connect.jsp"%>
 <%
+	// get all parameter
 	String old = request.getParameter("txtOld");
 	String newpassword = request.getParameter("txtNew");
 	String cpassword = request.getParameter("txtCPassword");
@@ -10,6 +11,8 @@
 	String currpass ="";
 	String message="";
 	ResultSet rs = st.executeQuery("select * from userstable where uid = "+session.getAttribute("uid"));
+
+	// check the update profile requirements
 	if(rs.next()){
 		currpass=rs.getString("password");
 	}
@@ -34,10 +37,14 @@
 	if(!photo.endsWith(".jpg")&&!photo.endsWith(".png")){
 		message +="Please Insert Photo with extension .jpg or .png<br/>";
 	}
+
+	// if no error
 	if(message.equals("")){
+		// update users table
 		stmt.executeUpdate("update userstable set password ='"+newpassword+"' , phone = '"+phonenumber+"' , email = '"+email+"' , address = '"+address+"' , photo = '"+photo+"' where uid = "+session.getAttribute("uid"));
 		response.sendRedirect("../profile.jsp");
 	}else{
+		// if error, redirect to updateprofile page and give error message
 		response.sendRedirect("../updateprofile.jsp?message=" + message);
 	}
 

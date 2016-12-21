@@ -1,6 +1,7 @@
 <%@include file="../helper/connect.jsp"%>
 
 <%
+	// get all parameter
 	String username = request.getParameter("txtUsername");
 	String fullname = request.getParameter("txtFullname");
 	String password = request.getParameter("txtPassword");
@@ -14,6 +15,8 @@
 
 	String message = "";
 
+
+	// check the register requirement
 	if(username.equals("")){
 		message += "please fill username <br/>";
 	}
@@ -41,11 +44,15 @@
 		message +="please insert photo with extension .jpg or .png";
 	}
 
+
+	// if no error
 	if(message.equals("")){
+		// insert new user to userstable
 		String query = "INSERT INTO userstable VALUES(null, '"+ fullname +"', '"+ username +"', '"+ phonenumber +"', '"+ email +"', '"+ password +"', '"+ gender +"', '"+ dob +"', '"+ address +"', 'member')";
 		st.executeUpdate(query);
 		response.sendRedirect("../register.jsp?message=Successfuly to register in bluejackstore :)");
 	}else{
+		// if error , redirect and send error message
 		response.sendRedirect("../register.jsp?message=" + message);
 	}
 
